@@ -51,17 +51,13 @@ const SignupPage = () => {
             </Col>
           </Row>
           <Row>
-            <Col xsOffset={2} xs={4} mdOffset={3} md={3}>
-              <Button text="Log in" onClick={(e) => handleLoginCTAClick(e)} tertiary />
-            </Col>
-            <Col xs={6}>
               <Button
                 text="Create account"
                 onClick={() => handleFormSubmit()}
                 secondary
-                size="lg"
+                size="m"
+                style={{margin: "0 auto"}}
               />
-            </Col>
           </Row>
         </form>
       </FormWrapper>
