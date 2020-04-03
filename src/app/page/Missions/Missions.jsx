@@ -26,6 +26,7 @@ const PlaceHolder = styled.div`
 const MissionsPage = ({ user, history, firebase, ...rest }) => {
   const missions = useSelector((state) => state.firestore.ordered.missionsTodo);
   const firestore = useFirestore();
+  console.log(User.getAuth)
 
   function volunteerForMission(missionId) {
     User.assignAsVolunteer(firestore, missionId, user.uid);
