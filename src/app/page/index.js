@@ -4,7 +4,11 @@ import MakeRequest from "./MakeRequest";
 import MakeMission from "./MakeMission";
 import Missions from "./Missions";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Dashboard from "../dashboard";
+=======
+import Dashboard from "./Dashboard";
+>>>>>>> change nzme from missions control to dashboard
 =======
 import Dashboard from "./Dashboard";
 >>>>>>> change nzme from missions control to dashboard
