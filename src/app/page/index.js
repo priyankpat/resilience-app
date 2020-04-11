@@ -5,6 +5,7 @@ import MakeMission from "./MakeMission";
 import Missions from "./Missions";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Dashboard from "../dashboard";
 =======
 import Dashboard from "./Dashboard";
@@ -12,6 +13,9 @@ import Dashboard from "./Dashboard";
 =======
 import Dashboard from "./Dashboard";
 >>>>>>> change nzme from missions control to dashboard
+=======
+import Dashboard from "../Dashboard";
+>>>>>>> feat: refactored dashboard ir out of pages and in app
 import MissionsCreated from "./MissionsCreated";
 import MissionsVolunteered from "./MissionsVolunteered";
 import MissionDetails from "./MissionDetails";
