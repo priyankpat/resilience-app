@@ -1,8 +1,7 @@
-#!/usr/bin/env node
-import {createMock} from  "ts-auto-mock";
-import path from "path"
+// import { createMock } from "ts-auto-mock";
+// import { inspect } from "util";
 
-interface Location {
+export interface Location {
   /* The address represent the location */
   address: string;
   /* Latitude */
@@ -13,9 +12,10 @@ interface Location {
   label: string;
 }
 
-type OrganizationUID = string;
 // ===== Organization ====
-interface Organization {
+type OrganizationUID = string;
+
+export interface Organization {
   /* unique id of the organ */
   readonly uid: OrganizationUID;
   name: string;
@@ -24,7 +24,7 @@ interface Organization {
 }
 
 // === USER ===
-interface User {
+export interface User {
   readonly uid: string;
   phone: number;
   name: string;
@@ -39,7 +39,7 @@ interface User {
 }
 
 //===== Mission =====//
-enum MissionStatus {
+export enum MissionStatus {
   unassigned = "unassigned",
   tentative = "tentative",
   assigned = "assigned",
@@ -48,7 +48,7 @@ enum MissionStatus {
   done = "done",
 }
 
-enum MissionFundedStatus {
+export enum MissionFundedStatus {
   notfunded = "fundingnotneeded",
   fundedbyrecipient = "fundedbyrecipient",
   fundedinkind = "fundedinkind",
@@ -56,33 +56,33 @@ enum MissionFundedStatus {
   fundedbydonation = "fundedbydonation",
 }
 
-enum MissionPayableStatus {
+export enum MissionPayableStatus {
   notacquired = "notacquired",
   readyforpickup = "readyforpickup",
 }
 
-enum MissionType {
+export enum MissionType {
   foodbox = "foodbox",
   pharmacy = "pharmacy",
   errand = "errand",
 }
 // grocery (with shopping list), readytoeat etc are types that may be added later
 
-enum TimeWindowType {
+export enum TimeWindowType {
   morning = "morning",
   afternoon = "afternoon",
   day = "wholeday",
   asap = "asap",
 }
 
-interface TimeWindow {
+export interface TimeWindow {
   timeWindowType: TimeWindowType;
   startTime: Date;
   endTime: Date; // we could infer this from the other two but shall we store  anyway, I think its better to keep it small, but, maybe it will be used in the future
   // for more accuracy
 }
 
-interface Mission {
+export interface Mission {
   uid: string;
   type: MissionType;
   status: MissionStatus;
@@ -123,7 +123,7 @@ interface Mission {
   missionlog: MissionLogEvent[];
 }
 
-interface MissionLogEvent {
+export interface MissionLogEvent {
   userId: string;
   action: string;
   actionDetail: string;
@@ -132,4 +132,7 @@ interface MissionLogEvent {
   timestamp: Date;
 }
 
-const mock1: Location = createMock<Location>();
+// const mock1 = createMock<Mission>();
+
+// console.log("test", JSON.stringify(mock1, null, 4));
+// // console.log(inspect(mock1, false, 10));
